@@ -1,4 +1,4 @@
-function RowsTitle({ category }) {
+function RowsTitle({ category }: { category: string }) {
     return (
         <tr>
             <th colSpan={2}>{category}</th>

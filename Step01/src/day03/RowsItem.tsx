@@ -1,4 +1,4 @@
-function RowsItem({ product }) {
+function RowsItem({ product }: { product: any }) {
     const name = product.stocked ? (
         product.name
     ) : (

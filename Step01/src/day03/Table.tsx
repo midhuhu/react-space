@@ -7,11 +7,11 @@ function Table({
 }: {
     searchText: string
     inStockOnly: boolean
-    data: []
+    data: any[]
 }) {
-    const rows = []
-    let category = null
-    data.forEach((item, index) => {
+    const rows: any = []
+    let category: string | null = null
+    data.forEach((item) => {
         if (item.name.toLowerCase().indexOf(searchText.toLowerCase()) === -1) {
             return
         }

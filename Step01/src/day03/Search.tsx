@@ -6,8 +6,8 @@ function Search({
 }: {
     searchText: string
     inStockOnly: boolean
-    onSearchTextChange: () => void
-    onInStockOnlyChange: () => void
+    onSearchTextChange: (v: string) => void
+    onInStockOnlyChange: (v: boolean) => void
 }) {
     return (
         <div className="search">
@@ -15,13 +15,13 @@ function Search({
                 type="text"
                 placeholder="search..."
                 value={searchText}
-                onChange={(e) => onSearchTextChange(e.target.value)}
+                onChange={(e: any) => onSearchTextChange(e.target.value)}
             ></input>
             <div className="checkbox">
                 <input
                     type="checkbox"
                     checked={inStockOnly}
-                    onChange={(e) => onInStockOnlyChange(e.target.checked)}
+                    onChange={(e: any) => onInStockOnlyChange(e.target.checked)}
                 />
                 仅显示库存产品
             </div>
