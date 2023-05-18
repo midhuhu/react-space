@@ -1,6 +1,5 @@
 import './Square.css'
-import { useState } from 'react'
-function Square({ num, click }: { num: number; click: () => void }) {
+function Square({ num, click }: { num: string; click: () => void }) {
     return (
         <button className="square" onClick={click}>
             {num}

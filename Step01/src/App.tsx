@@ -1,13 +1,9 @@
 import './App.css'
-import Index from './day01/Index'
-import Index2 from './day02/Index'
+import Index3 from './day03'
 function App() {
     return (
         <div>
-            {/* day01 */}
-            {/* <Index /> */}
-            {/* day02 */}
-            <Index2 />
+            <Index3 />
         </div>
     )
 }

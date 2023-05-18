@@ -3,7 +3,17 @@ import Square from './Square'
 
 function Index2() {
     const [xIsNext, setXIsNext] = useState(true)
-    const [square, setSquare] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9])
+    const [square, setSquare] = useState([
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+    ])
 
     const winner = calculateWinner(square)
     let status
@@ -12,7 +22,7 @@ function Index2() {
     } else {
         status = 'Next player is: ' + (xIsNext ? 'X' : 'O')
     }
-    function handleClick(i) {
+    function handleClick(i: number) {
         if (['X', 'O'].includes(square[i]) || calculateWinner(square)) {
             return
         }
@@ -47,7 +57,7 @@ function Index2() {
     )
 }
 
-function calculateWinner(squares) {
+function calculateWinner(square: string[]) {
     const lines = [
         [0, 1, 2],
         [3, 4, 5],
@@ -61,11 +71,11 @@ function calculateWinner(squares) {
     for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i]
         if (
-            ['X', 'O'].includes(squares[a]) &&
-            squares[a] === squares[b] &&
-            squares[a] === squares[c]
+            ['X', 'O'].includes(square[a]) &&
+            square[a] === square[b] &&
+            square[a] === square[c]
         ) {
-            return squares[a]
+            return square[a]
         }
     }
     return null
